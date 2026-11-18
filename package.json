@@ -1,0 +1,38 @@
+{
+  "name": "hear-ontology",
+  "version": "0.1.0",
+  "description": "Top Ontology 2 — a practical, perspective-aware ontology for HEAR (Hilma Engineering Anomalous Research)",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ontology",
+    "sumo",
+    "hear",
+    "hilma-af-klint",
+    "consciousness",
+    "epistemics"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test tests",
+    "demo": "npm run build && node examples/demo.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.8.2"
+  }
+}
